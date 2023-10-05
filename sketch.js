@@ -1,4 +1,5 @@
 let miPelota;
+let frutas = ["manzana", "pera", "pina****56"];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -6,7 +7,6 @@ function setup() {
 }
 
 function draw() {
-  
   background(255);
   circle(mouseX, mouseY, 20);
   miPelota.update(300);
