@@ -1,17 +1,15 @@
 class Pelota {
-  constructor(_x, _y) {
-    this.posX = _x;
-    this.posY = _y;
+  constructor() {
+    this.posX = random(50, windowWidth - 50);
+    this.posY = random(10, 130);
 
-    this.velX = random(-1, 1);
-    this.velY = 0;
+    this.velX = random(-20, 20);
+    this.velY = 0.0;
     this.acelY = 0.98;
 
     this.diam = int(random(5, 50));
     this.rad = this.diam / 2;
-    this.colorin = color(20, random(100, 255), random(0, 150));
-
-    print("Hola, estoy vive!");
+    this.colorin = color(175, random(180, 255), random(50, 190));
   }
 
   update(_piso) {
@@ -26,6 +24,11 @@ class Pelota {
     if (this.posX > windowWidth) {
       this.velX *= -1;
     }
+
+    if (this.posX < 0) {
+      this.velX *= -1;
+    }
+    this.posX += this.velX;
   }
 
   display() {
