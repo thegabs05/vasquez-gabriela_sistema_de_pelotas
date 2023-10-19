@@ -9,7 +9,7 @@ class Pelota {
 
     this.diam = int(random(5, 50));
     this.rad = this.diam / 2;
-    this.colorin = color(175, random(180, 255), random(50, 190));
+    this.colorin = color(225, random(180, 255), random(50, 190));
   }
 
   update(_piso) {
@@ -19,6 +19,7 @@ class Pelota {
     } else {
       this.velY *= -1.0;
       this.posY += this.velY;
+      this.colorin = color(random(180, 255), random(90, 150), 250);
     }
 
     if (this.posX > windowWidth) {
