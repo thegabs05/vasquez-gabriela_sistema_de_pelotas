@@ -5,7 +5,7 @@ class Pelota {
 
     this.velX = random(-20, 20);
     this.velY = 0.0;
-    this.acelY = 0.98;
+    this.acelY = random(0.1, 0.98);
 
     this.diam = int(random(5, 50));
     this.rad = this.diam / 2;
@@ -19,17 +19,18 @@ class Pelota {
     } else {
       this.velY *= -1.0;
       this.posY += this.velY;
-      this.colorin = color(random(180, 255), random(90, 150), 250);
+      this.colorin = color(random(26, 255), random(26, 255), 238);
+      this.diam = int(random(50, 70));
     }
 
-    if (this.posX > windowWidth) {
-      this.velX *= -1;
-    }
+    // if (this.posX > windowWidth) {
+    // this.velX *= -1;
+    //}
 
-    if (this.posX < 0) {
-      this.velX *= -1;
-    }
-    this.posX += this.velX;
+    //if (this.posX < 0) {
+    // this.velX *= -1;
+    //}
+    //this.posX += this.velX;
   }
 
   display() {
